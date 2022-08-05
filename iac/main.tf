@@ -9,14 +9,11 @@ terraform {
 
 provider "digitalocean" {
   token =var.do_token
-  # "dop_v1_fadcf3613466903dc2887d57bd0cfe4906aed4049706c0587451b4036cad0400"
 }
 
 resource "digitalocean_kubernetes_cluster" "k8s_aula" {
   name = var.k8s_name
-  # "k8s-aula"
   region = var.region
-  # "nyc1"
   version = "1.23.9-do.0"
 
   node_pool {
